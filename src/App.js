@@ -7,7 +7,7 @@ var source = mus;
 var audio = document.createElement("audio");
 audio.autoplay = true;
 audio.load()
-audio.addEventListener("load", function(){audio.autoplay();}, true);
+audio.addEventListener("load", function(){audio.play();}, true);
 audio.src = source;
 alert ("PLEASE READ THE COMMENT AT TOP THE PICTURE FIRST BEFORE YOU SCROLL DOWN")
 class App extends React.Component {
