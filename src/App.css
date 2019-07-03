@@ -3,20 +3,31 @@
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+  animation: App-logo-spin infinite 1.5s linear;
+
+  height: 90vmin;
   pointer-events: none;
+  border-radius: 60%;
+}
+.Glitch::before {
+
+  animation: glitch-anim-1 2s infinite linear alternate-reverse;
+
+}
+.Glitch::after {
+  animation: glitch-anim-2 2s infinite linear alternate-reverse;
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #eef0f5;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(12, 12, 12);
+  border: 50%;
 }
 
 .App-link {
@@ -25,9 +36,11 @@
 
 @keyframes App-logo-spin {
   from {
-    transform: rotate(0deg);
-  }
-  to {
     transform: rotate(360deg);
   }
+  to {
+    transform: rotate(0deg);
+  }
 }
+
+
