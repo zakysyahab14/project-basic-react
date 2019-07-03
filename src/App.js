@@ -3,7 +3,12 @@ import logo from './spiral.png';
 import './App.css';
 import mus from './melody.mp3';
 import DisplayInformation from "./components/promps-state";
-
+var source = mus;
+var audio = document.createElement("audio");
+audio.autoplay = true;
+audio.load()
+audio.addEventListener("load", function(){audio.play();}, true);
+audio.src = source;
 alert ("PLEASE READ THE COMMENT AT TOP THE PICTURE FIRST BEFORE YOU SCROLL DOWN")
 class App extends React.Component {
   constructor() {
@@ -17,8 +22,12 @@ class App extends React.Component {
 
 render() {
   return (
+    
     <div className="App">
-          <audio src={mus} autoPlay />
+      {/* <audio src={mus} autoPlay /> */}
+
+
+
 
       <header className="App-header">
         <DisplayInformation/>
